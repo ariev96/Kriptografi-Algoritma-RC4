@@ -1,0 +1,184 @@
+1. Masuk command prompt (start->ketik cmd->enter)
+
+2. Masuk ke direktori mysql
+   C:\Users\Administrator>cd c:\xampp\mysql\bin
+
+   c:\xampp\mysql\bin>
+
+3. Masuk ke mysql server
+   c:\xampp\mysql\bin>mysql -u root
+
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 5
+Server version: 5.6.20 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2014, Oracle and/or its affiliates. All rights r
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input
+
+mysql>   
+
+4. Keluar dari mysql server
+   mysql> quit
+   Bye
+   
+5. Menampilkan database yang ada di server
+   show databases;
+
+6. Membuat database
+   create database namadatabase; //tidakdijalankan
+
+   create database dnimanda; //tidakdijalankan
+
+   create database d1411500123;
+
+   mysql> create database d1411500123;
+   Query OK, 1 row affected (0.00 sec)
+
+7. tampilkan database yang ada
+mysql> show databases;
++----------------------+
+| Database             |
++----------------------+
+| information_schema   |
+| biodata              |
+| bocahbocil           |
+| cdcol                |
+| d1411500123          |
+| database             |   
+
+8. Menggunakan database (aktifkan/panggil)
+   use namadatabase;
+
+   mysql> use d1411500123;
+   Database changed
+
+
+9. Menampilkan tabel yang ada di database
+   show tables;
+
+   mysql> show tables;
+   Empty set (0.01 sec)
+
+
+10. Membuat tabel
+    create table namatabel (namafield1 tipedata(lebar) atribut lain, namafieldn...., primary key());
+
+    mysql> create table mhs (
+    -> nim varchar(10) not null,
+    -> nama varchar(20) not null,
+    -> alamat varchar(30) not null,
+    -> primary key (nim)
+    -> );
+    Query OK, 0 rows affected (0.43 sec)    
+
+11. Tampilkan tabel yang ada
+mysql> show tables;
++-----------------------+
+| Tables_in_d1411500123 |
++-----------------------+
+| mhs                   |
++-----------------------+
+1 row in set (0.00 sec)
+
+12. Menginputkan data ke tabel
+    insert into namatabel values ('isifield1',...);
+
+    mysql> insert into mhs values ('1411500123', 
+           'Budi', 'Jakarta');
+    Query OK, 1 row affected (0.07 sec)
+
+13. Tampilkan isi dari tabel
+    select * from namatabel;
+
+mysql> select * from mhs;
++------------+------+---------+
+| nim        | nama | alamat  |
++------------+------+---------+
+| 1411500123 | Budi | Jakarta |
++------------+------+---------+
+1 row in set (0.00 sec)
+
+
+mysql> select nim, nama from mhs;
++------------+-------+
+| nim        | nama  |
++------------+-------+
+| 1411500123 | Budi  |
+| 1411500456 | Luhur |
++------------+-------+
+2 rows in set (0.00 sec)
+
+
+mysql> select * from mhs where nama='Budi';
++------------+------+---------+
+| nim        | nama | alamat  |
++------------+------+---------+
+| 1411500123 | Budi | Jakarta |
++------------+------+---------+
+1 row in set (0.04 sec)
+
+
+mysql> select * from mhs where nama='Budi' or nama='Luhur';
++------------+-------+---------+
+| nim        | nama  | alamat  |
++------------+-------+---------+
+| 1411500123 | Budi  | Jakarta |
+| 1411500456 | Luhur | Bandung |
++------------+-------+---------+
+2 rows in set (0.00 sec)
+
+
+mysql> select * from mhs where nama like 'Budi%';
++------------+------+---------+
+| nim        | nama | alamat  |
++------------+------+---------+
+| 1411500123 | Budi | Jakarta |
++------------+------+---------+
+1 row in set (0.01 sec)
+
+
+14. Update Data
+    UPDATE namatabel SET namafield='databaru'
+    WHERE namafield='isifield'  
+    
+mysql> update mhs set nama='Budiman' where nim='1411500123';
+Query OK, 1 row affected (0.07 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from mhs;
++------------+---------+---------+
+| nim        | nama    | alamat  |
++------------+---------+---------+
+| 1411500123 | Budiman | Jakarta |
+| 1411500456 | Luhur   | Bandung |
++------------+---------+---------+
+2 rows in set (0.00 sec)
+
+
+15. Hapus data
+    DELETE FROM namatabel WHERE kondisi;
+
+mysql> delete from mhs where nim='1411500123';
+Query OK, 1 row affected (0.07 sec)
+
+mysql> select * from mhs;
++------------+-------+---------+
+| nim        | nama  | alamat  |
++------------+-------+---------+
+| 1411500456 | Luhur | Bandung |
++------------+-------+---------+
+1 row in set (0.00 sec)
+
+
+
+
+
+
+
+
+

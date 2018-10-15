@@ -1,0 +1,15 @@
+		Data Karyawan PT.Datasistem Global Teknologi						
+								
+								
+	No	Kode Karyawan		Nama Karyawan	NIK	Jabatan				NPWP			Tanggal Lahir	Gaji Pokok
+								
+	1	C-01-00-10-03-01	Ibnu Maharik	N95001	Direktur			59.670.244.9.412.000	2-12-1888	52000000
+	2	C-01-00-10-03-02	Arief Budiman	N95002	Acct & Fin Manager		59.671.244.9.413.001	5-9-1899	32000000
+	3	C-01-00-10-03-03	Hasan Basri	N95003	Cost Control			59.670.244.9.412.001	15-5-1996	10000000
+	4	C-01-00-10-03-04	Eggy Riski	N95004	Tax Supervisor			59.671.244.9.413.002	20-9-1995	9000000
+	5	C-01-00-10-03-05	Ary Maulana	N95005	Acct & Fin Staff		59.670.244.9.412.002	23-6-1999	7000000
+	6	C-01-00-10-03-06	Erlangga Dwi	N95006	Accounting Staff		59.671.244.9.413.003	28-9-1894	4000000
+	7	C-01-00-10-03-07	Hijrian Dwi	N95007	Driver				59.670.244.9.412.003	21-4-1892	5000000
+	8	C-01-00-10-03-08	Pandu		N95008	Electrical Superitendence	59.671.244.9.413.004	14-9-1877	4000000
+	9	C-01-00-10-03-09	Indah 		N95009	HRD Leader			59.670.244.9.412.004	19-5-1892	5000000
+	10	C-01-00-10-03-10	Wahida Zakiah	N95010	HRD Staff			59.671.244.9.413.005	23-5-1999	5000000
